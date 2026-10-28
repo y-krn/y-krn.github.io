@@ -7,9 +7,9 @@
 <meta name="description" content="y-krn が作っているもの。百科拳典（ひゃっかけんてん）— Wikipediaの記事が、事実だけで殴り合う。">
 <meta property="og:title" content="y-krn">
 <meta property="og:description" content="百科拳典（ひゃっかけんてん）— Wikipediaの記事が、事実だけで殴り合う。">
-<meta property="og:image" content="https://y-krn.github.io/hyakka-kenten/og.png">
+<meta property="og:image" content="https://hyakkakenten.com/og.png">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="https://y-krn.github.io/hyakka-kenten/favicon-32.png">
+<link rel="icon" href="https://hyakkakenten.com/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
 <style>
@@ -57,8 +57,8 @@ footer a{color:var(--muted)}
 <body>
   <div class="who">y-krn</div>
 
-  <a class="hero" href="https://y-krn.github.io/hyakka-kenten/" aria-label="百科拳典で遊ぶ">
-    <img class="icon" src="https://y-krn.github.io/hyakka-kenten/icon-512.png" alt="" width="132" height="132">
+  <a class="hero" href="https://hyakkakenten.com/" aria-label="百科拳典で遊ぶ">
+    <img class="icon" src="https://hyakkakenten.com/icon-512.png" alt="" width="132" height="132">
     <h1 class="title">百科拳典</h1>
     <div class="yomi">ひゃっかけんてん</div>
     <p class="tag">Wikipediaの記事が、事実だけで殴り合う。</p>
@@ -74,7 +74,7 @@ footer a{color:var(--muted)}
 
 <script>
 // いまの王者を、王座戦のAPIから表示する（取れなければ何も出さない）
-fetch('https://hyakka-kenten-api.y-krn.workers.dev/api/throne').then(r=>r.json()).then(d=>{
+fetch('https://hyakkakenten.com/api/throne').then(r=>r.json()).then(d=>{
   if(!d||!d.champ) return; const e=document.getElementById('champ'); const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   e.innerHTML='いまの王者：<b>'+esc(d.champ.display)+'</b>（第'+d.reignNo+'代・防衛'+d.champ.defenses+'回）';
 }).catch(()=>{});
